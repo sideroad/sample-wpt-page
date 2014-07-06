@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     githubPages: {
       target: {
         // The folder where your gh-pages repo is
-        src: 'pages/public'
+        src: 'pages'
       }
     }
 
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['wpt']);
+  grunt.registerTask('default', ['wpt', 'deploy']);
   grunt.registerTask('deploy', ['githubPages:target']);
 
 };
