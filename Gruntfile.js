@@ -31,6 +31,17 @@ module.exports = function(grunt) {
         },
         dest: 'pages'
       }
+    },
+
+    githubPages: {
+      target: {
+        options: {
+          // The default commit message for the gh-pages branch
+          commitMessage: 'push'
+        },
+        // The folder where your gh-pages repo is
+        src: 'pages/public'
+      }
     }
 
 
@@ -38,8 +49,11 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-wpt');
+  grunt.loadNpmTasks('grunt-github-pages');
+
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['wpt']);
+  grunt.registerTask('deploy', ['githubPages:target']);
 
 };
