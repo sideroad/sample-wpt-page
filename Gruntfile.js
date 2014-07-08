@@ -19,14 +19,15 @@ module.exports = function(grunt) {
     wpt: {
       options: {
         locations: ['Tokyo'],
-        runs: 4,
+        runs: 10,
         key: process.env.WPT_API_KEY
       },
       target: {
         options: {
           url: [
             'http://sideroad.secret.jp/',
-            'http://travel.rakuten.co.jp/'
+            'http://travel.rakuten.co.jp/',
+            'http://hotel.travel.rakuten.co.jp/hotelinfo/plan/19455/'
           ]
         },
         dest: 'pages'
