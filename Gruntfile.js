@@ -20,13 +20,14 @@ module.exports = function(grunt) {
       options: {
         locations: ['Tokyo'],
         runs: 10,
+        timeout: 3600,
         key: process.env.WPT_API_KEY
       },
       target: {
         options: {
           url: [
             'http://sideroad.secret.jp/',
-            'http://travel.rakuten.co.jp/',
+            'http://travel.rakuten.co.jp/', 
             'http://hotel.travel.rakuten.co.jp/hotelinfo/plan/19455/'
           ]
         },
