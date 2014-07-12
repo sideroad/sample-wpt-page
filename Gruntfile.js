@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     wpt: {
       options: {
         locations: ['Tokyo'],
-        runs: 10,
+        runs: 5,
         timeout: 3600,
         key: process.env.WPT_API_KEY
       },
