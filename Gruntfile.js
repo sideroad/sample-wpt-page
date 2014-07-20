@@ -26,9 +26,7 @@ module.exports = function(grunt) {
       target: {
         options: {
           url: [
-            'http://sideroad.secret.jp/',
-            'http://travel.rakuten.co.jp/', 
-            'http://hotel.travel.rakuten.co.jp/hotelinfo/plan/19455/'
+            'http://sideroad.secret.jp/'
           ]
         },
         dest: 'pages'
